@@ -12,10 +12,10 @@ $('#set_variables_form').submit(function (e) {
     run();
 });
 
-function drawCircle(myCircle, context) {
+function drawCircle(myCircle, context, color) {
     context.beginPath();
     context.arc(myCircle.x, myCircle.y, myCircle.mass, 0, 2 * Math.PI, false);
-    context.fillStyle = 'rgba(0,0,0,1)';
+    context.fillStyle = color;
     context.fill();
 }
 
@@ -23,8 +23,8 @@ function drawLine(myLine, context) {
     context.beginPath();
     context.moveTo(myLine.x0, myLine.y0);
     context.lineTo(myLine.x, myLine.y);
-    context.strokeStyle = 'red';
-    context.lineWidth = 5;
+    context.strokeStyle = 'black';
+    context.lineWidth = 1;
     context.stroke();
 }
 
@@ -53,8 +53,8 @@ function animate(myCircle1, myCircle2, myLine1, myLine2, canvas, context) {
 
     drawLine(myLine1, context);
     drawLine(myLine2, context);
-    drawCircle(myCircle1, context);
-    drawCircle(myCircle2, context);
+    drawCircle(myCircle1, context, 'blue');
+    drawCircle(myCircle2, context, 'red');
 }
 
 //Physics Constants
