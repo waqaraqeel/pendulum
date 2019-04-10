@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\author{Waqar Aqeel}
+\date{March 2019}
+\title{Project Proposal - Nonlinear Dynamics}
+
+\begin{document}
+\maketitle
+
+For this project, I want to present a method using nonlinear analysis of chaotic systems to generate true random numbers.
+Random number generation has extensive applications in cryptography, simulation, game theory, and so on.
+Conventionally generated random numbers are at best pseudo-random given that computers are deterministic machines. A seed is
+used to initialize the random number generator and care is taken to make sure that the seed is not predictable, because
+given a unique seed, the generator will always produce the same sequence of random numbers.
+
+\bigbreak
+In contrast to this, the chaotic behavior of nonlinear systems can be used to produce random numbers that are, although
+deterministic, impossible to predict. I want to run a computer simulation of a double pendulum, present a nonlinear analysis
+of the system, and use it's angular displacement at pseudo-random time intervals to generate a sequence of random numbers.
+This sequence will then be run through statistical tests of randomness to check its quality.
+
+\bigbreak
+\bigbreak
+\textit{Disclaimer:} For another course, I'm working on a survey of nano-techniques used for random number generation.
+This is different from chaotic systems as the inherent randomness of quantum physical phenomena, such as
+radioactivity and quantum tunneling, are used in that case.
+\end{document}
