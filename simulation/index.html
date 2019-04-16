@@ -19,24 +19,32 @@
 <body>
     <div class="container">
         <div class="row mt-5">
-            <h2>Nonlinear Dynamics &mdash; Double Pendulum</h2>
-        </div>
-        <div class="row">
-            <canvas class="pendulum" height="700px" id="myCanvas" width="700px"></canvas>
-        </div>
-        <div class="row">
-            <div class="sidebar">
-                <form id="set_variables_form" autocomplete="off">
-                    <label for="Phi1">&Phi;<sub>1</sub></label>
-                    <input id="Phi1" type="number" value="90">
+            <div class="col-10">
+                <div class="row">
+                    <h2>Nonlinear Dynamics &mdash; Double Pendulum</h2>
+                </div>
+                <div class="row">
+                    <canvas class="pendulum" height="700px" id="myCanvas" width="700px"></canvas>
+                </div>
+                <div class="row">
+                    <div class="sidebar">
+                        <form id="set_variables_form" autocomplete="off">
+                            <label for="Phi1">&Phi;<sub>1</sub></label>
+                            <input id="Phi1" type="number" value="90">
 
-                    <label for="Phi2">&Phi;<sub>2</sub></label>
-                    <input id="Phi2" type="number" value="0">
+                            <label for="Phi2">&Phi;<sub>2</sub></label>
+                            <input id="Phi2" type="number" value="0">
 
-                    <label for="gravity">g</label>
-                    <input id="gravity" type="number" value="9.8">
-                    <input class="submit-btn" type="submit" value="Start">
-                </form>
+                            <label for="gravity">g</label>
+                            <input id="gravity" type="number" value="9.8">
+                            <input class="submit-btn" type="submit" value="Start">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>&Phi;<sub>2</sub>: <span id="numbers"></span></p>
+                <canvas class="numberline" height="50px" id="numberline" width="100px"></canvas>
             </div>
         </div>
     </div>

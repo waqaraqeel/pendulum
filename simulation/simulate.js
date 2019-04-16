@@ -54,6 +54,8 @@ function animate(myCircle1, myCircle2, myLine1, myLine2, canvas, context) {
     drawLine(myLine2, context);
     drawCircle(myCircle1, context, 'blue');
     drawCircle(myCircle2, context, 'red');
+
+    numbers.innerHTML = Phi2.toFixed(4);
 }
 
 //Physics Constants
@@ -71,8 +73,10 @@ var X0 = 350;
 var Y0 = 250;
 var g = 9.8;
 var time = 0.05;
+var printed = 0;
 
 var canvas = document.getElementById('myCanvas');
+var numbers = document.getElementById('numbers');
 var context = canvas.getContext('2d');
 var init = {};
 
