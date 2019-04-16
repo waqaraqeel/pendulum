@@ -1,10 +1,9 @@
 $('#set_variables_form').submit(function (e) {
     e.preventDefault();
     console.log($('#mass1').val());
-    m1 = $('#mass1').val();
-    m2 = $('#mass2').val();
     Phi1 = $('#Phi1').val() / 180 * (Math.PI);
     Phi2 = $('#Phi2').val() / 180 * (Math.PI);
+    g = $('#gravity').val();
     d2Phi1 = 0;
     d2Phi2 = 0;
     dPhi1 = 0;
@@ -64,11 +63,12 @@ var dPhi1 = 0;
 var dPhi2 = 0;
 var Phi1 = 0 * (Math.PI) / 2;
 var Phi2 = 2.3 * (Math.PI) / 2;
+var m1 = 10;
 var m2 = 10;
 var l1 = 150;
 var l2 = 150;
 var X0 = 350;
-var Y0 = 60;
+var Y0 = 250;
 var g = 9.8;
 var time = 0.05;
 

@@ -1,34 +1,13 @@
-
-/* line 2, ../sass/double_pendulum.sass */
-.sidebar {
-  background: #fafafa;
-  float: left;
-  font-family: Helvetica, Arial, sans-serif;
-  min-width: 200px;
-  height: 100%;
-  margin: 0;
-  padding: 10px 5px;
-}
-/* line 9, ../sass/double_pendulum.sass */
-.sidebar label {
-  margin: 10px 0 5px 10px;
-  display: block;
-}
-/* line 12, ../sass/double_pendulum.sass */
-.sidebar input {
-  margin: 10px 0 5px 10px;
-  display: block;
-  margin-bottom: 10px;
+.sidebar input[type="number"] {
+    width: 50px;
+    margin-right: 15px;
+    text-align: right;
 }
 
-/* line 17, ../sass/double_pendulum.sass */
-.phys-canvas {
-  float: left;
+.sidebar input[type="number"] {
+    width: 50px;
 }
 
-/* line 20, ../sass/double_pendulum.sass */
-.submit-btn {
-  width: 80%;
-  padding: 5px;
-  text-align: center;
+.row {
+  justify-content: center;
 }
