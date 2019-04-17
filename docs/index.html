@@ -30,10 +30,10 @@
                     <div class="sidebar">
                         <form id="set_variables_form" autocomplete="off">
                             <label for="Phi1">&Phi;<sub>1</sub></label>
-                            <input id="Phi1" type="number" value="90">
+                            <input id="Phi1" type="number" value="180">
 
                             <label for="Phi2">&Phi;<sub>2</sub></label>
-                            <input id="Phi2" type="number" value="0">
+                            <input id="Phi2" type="number" value="181">
 
                             <label for="gravity">g</label>
                             <input id="gravity" type="number" value="9.8">
@@ -44,6 +44,8 @@
             </div>
             <div class="col-2">
                 <p>&Phi;<sub>2</sub>: <span id="numbers"></span></p>
+                <p>Iteration: <span id="iteration"></span></p>
+                <input class="submit-btn" type="submit" id="downbutton" value="Download">
                 <canvas class="numberline" height="50px" id="numberline" width="100px"></canvas>
             </div>
         </div>

@@ -1,5 +1,12 @@
+$('#downbutton').click(function() {
+    download("samples.txt", exports.join("\n"));
+    count = 0;
+    exports.length = 0;
+});
 $('#set_variables_form').submit(function (e) {
     e.preventDefault();
+    exports.length = 0;
+    count = 0;
     console.log($('#mass1').val());
     Phi1 = $('#Phi1').val() / 180 * (Math.PI);
     Phi2 = $('#Phi2').val() / 180 * (Math.PI);
@@ -55,10 +62,14 @@ function animate(myCircle1, myCircle2, myLine1, myLine2, canvas, context) {
     drawCircle(myCircle1, context, 'blue');
     drawCircle(myCircle2, context, 'red');
 
+    count += 1
+    exports.push(Phi2)
     numbers.innerHTML = Phi2.toFixed(4);
+    iteration.innerHTML = count;
 }
 
 //Physics Constants
+var count = 0;
 var d2Phi1 = 0;
 var d2Phi2 = 0;
 var dPhi1 = 0;
@@ -75,8 +86,10 @@ var g = 9.8;
 var time = 0.05;
 var printed = 0;
 
+var exports = []
 var canvas = document.getElementById('myCanvas');
 var numbers = document.getElementById('numbers');
+var iteration = document.getElementById('iteration');
 var context = canvas.getContext('2d');
 var init = {};
 
@@ -92,4 +105,21 @@ function run() {
         animate(myCircle1, myCircle2, myLine1, myLine2, canvas, context);
     }, 5);
 
+}
+
+
+
+////////////////////////////
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
